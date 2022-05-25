@@ -1,19 +1,17 @@
 import React, { useEffect, useState } from 'react';
 import { useQuery } from 'react-query';
+import Loading from '../../shared/Loading/Loading';
 import Product from '../Product/Product';
 
 const Products = () => {
-    /* const { isLoading, error, data: products } = useQuery('products', () =>
-        fetch('tools.json').then(res =>
+    const { isLoading, error, data: products } = useQuery('products', () =>
+        fetch('http://localhost:5000/products').then(res =>
             res.json()
         )
-    ) */
-    const [products, setProducts] = useState([]);
-    useEffect(() => {
-        fetch('tools.json')
-            .then(res => res.json())
-            .then(data => setProducts(data))
-    }, [])
+    );
+    if (isLoading) {
+        return <Loading></Loading>
+    }
     return (
         <div className='mt-24'>
             <h1 className="text-4xl text-center text-[#0AA1DD]">Tools Of Heaven Brand!</h1>

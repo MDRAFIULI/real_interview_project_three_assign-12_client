@@ -1,6 +1,5 @@
 [
     {
-        "_id": 1,
         "name": "Anvil",
         "img": "https://i.ibb.co/3m4q93m/anvil.jpg",
         "description": "It's Raw materials from Qoriah",
@@ -9,7 +8,6 @@
         "perUnitPrice": 100
     },
     {
-        "_id": 2,
         "name": "Axe",
         "img": "https://i.ibb.co/Pr101pQ/axe.jpg",
         "description": "Import from poland",
@@ -18,7 +16,6 @@
         "perUnitPrice": 100
     },
     {
-        "_id": 3,
         "name": "Drill Bits",
         "img": "https://i.ibb.co/TYL4B4B/drill-bits.jpg",
         "description": "It's Raw materials from India",
@@ -27,7 +24,6 @@
         "perUnitPrice": 100
     },
     {
-        "_id": 4,
         "name": "Gouges",
         "img": "https://i.ibb.co/QKQ4cp0/gouges.jpg",
         "description": "Import from chaina",
@@ -36,7 +32,6 @@
         "perUnitPrice": 100
     },
     {
-        "_id": 5,
         "name": "Hammer",
         "img": "https://i.ibb.co/JKBVKKh/hammer.jpg",
         "description": "It's Raw materials from chaina",
@@ -45,7 +40,6 @@
         "perUnitPrice": 100
     },
     {
-        "_id": 6,
         "name": "Hatche",
         "img": "https://i.ibb.co/mt7gvN2/hatche.jpg",
         "description": "Import from Qoriah",
@@ -54,7 +48,6 @@
         "perUnitPrice": 100
     },
     {
-        "_id": 7,
         "name": "Knife",
         "img": "https://i.ibb.co/NW8npNg/knife.jpg",
         "description": "It's Raw materials from Newzilland",
@@ -63,7 +56,6 @@
         "perUnitPrice": 100
     },
     {
-        "_id": 8,
         "name": "Maul",
         "img": "https://i.ibb.co/Lz2pZQH/maul.jpg",
         "description": "Import from South Afrika",
@@ -72,7 +64,6 @@
         "perUnitPrice": 100
     },
     {
-        "_id": 9,
         "name": "Pliers",
         "img": "https://i.ibb.co/S62mBhp/pliers.jpg",
         "description": "It's Raw materials from India",
@@ -81,7 +72,6 @@
         "perUnitPrice": 100
     },
     {
-        "_id": 10,
         "name": "Screwdriver",
         "img": "https://i.ibb.co/QdrnPkz/screwdriver.png",
         "description": "Import from Chaina",
@@ -90,7 +80,6 @@
         "perUnitPrice": 100
     },
     {
-        "_id": 11,
         "name": "Scythe",
         "img": "https://i.ibb.co/YThctnt/scythe.webp",
         "description": "It's Raw materials from Rusia",
@@ -99,7 +88,6 @@
         "perUnitPrice": 100
     },
     {
-        "_id": 12,
         "name": "Sharpening",
         "img": "https://i.ibb.co/Tr12b3x/sharpening.jpg",
         "description": "Import from Indonasia",
@@ -108,7 +96,6 @@
         "perUnitPrice": 100
     },
     {
-        "_id": 13,
         "name": "Sickle",
         "img": "https://i.ibb.co/sH5dMT9/sickle.jpg",
         "description": "It's Raw materials from Poland",
@@ -117,7 +104,6 @@
         "perUnitPrice": 100
     },
     {
-        "_id": 14,
         "name": "Square",
         "img": "https://i.ibb.co/HBRNwTP/square.jpg",
         "description": "It's Raw materials from Rusia",
@@ -126,7 +112,6 @@
         "perUnitPrice": 100
     },
     {
-        "_id": 15,
         "name": "Wrench",
         "img": "https://i.ibb.co/4s6LgVn/wrench.jpg",
         "description": "Import from Chaina",
