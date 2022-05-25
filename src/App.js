@@ -7,6 +7,8 @@ import Purchase from './page/Purchase/Purchase';
 import Register from './page/Register/Register';
 import Login from './page/Login/Login';
 import RequireAuth from './page/RequireAuth';
+import Dashboard from './page/Dashboard/Dashboard';
+import NotFound from './page/NotFound/NotFound';
 
 function App() {
   return (
@@ -20,6 +22,10 @@ function App() {
         <Route path='/purchase/:id' element={<RequireAuth>
           <Purchase></Purchase>
         </RequireAuth>}></Route>
+        <Route path='/dashboard' element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
+
+        </Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
   );
