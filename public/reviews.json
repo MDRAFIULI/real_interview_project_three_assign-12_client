@@ -1,0 +1,20 @@
+[
+    {
+        "_id": 1,
+        "name": "Sabbir Hossain",
+        "ratings": "5",
+        "comment": "Nice job, good service.quality is always best."
+    },
+    {
+        "_id": 2,
+        "name": "Hasib talukdar",
+        "ratings": "4",
+        "comment": "Heaven tools is best company of tools."
+    },
+    {
+        "_id": 3,
+        "name": "Soham Hasan",
+        "ratings": "5",
+        "comment": "Go forward dude."
+    }
+]
