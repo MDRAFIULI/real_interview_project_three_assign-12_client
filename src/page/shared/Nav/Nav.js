@@ -48,7 +48,7 @@ const Nav = () => {
                             <li><Link to='/dashboard/myProfile'>My Profile</Link></li>
                         </ul>
                     </li>
-                    <li><a>Item 3</a></li>
+                    <li><Link to='/portfolio'>My Portfolio</Link></li>
                 </ul>
             </div>
             <div class="navbar-end">

@@ -14,6 +14,7 @@ import AddReview from './page/Dashboard/AddReview/AddReview';
 import MyProfile from './page/Dashboard/MyProfile/MyProfile';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import MyPortfolio from './page/MyPortfolio/MyPortfolio';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
           <Route path='addReview' element={<AddReview></AddReview>}></Route>
           <Route path='myProfile' element={<MyProfile></MyProfile>}></Route>
         </Route>
+        <Route path='/portfolio' element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
     </div>
