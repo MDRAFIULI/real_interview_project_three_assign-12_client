@@ -47,7 +47,7 @@ const AddReview = () => {
     }
     return (
         <div className='mx-auto'>
-            <h1>AddReview</h1>
+            {/* <h1 className='text-3xl ml-8 my-8 text-orange-400'>Add A Review</h1>
             <div class="mockup-phone border-primary">
                 <div class="camera"></div>
                 <div class="display">
@@ -64,7 +64,7 @@ const AddReview = () => {
                         </form>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 };
