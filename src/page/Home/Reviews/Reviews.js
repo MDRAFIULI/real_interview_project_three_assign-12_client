@@ -4,14 +4,6 @@ import Loading from '../../shared/Loading/Loading';
 import Review from '../Review/Review';
 
 const Reviews = () => {
-    /* const [reviews, setReviews] = useState([]);
-    useEffect(() => {
-        fetch('reviews.json')
-            .then(res => res.json())
-            .then(data => setReviews(data))
-    }, []); */
-
-
     const { isLoading, error, data: reviews } = useQuery('reviews', () =>
         fetch('http://localhost:5000/reviews').then(res =>
             res.json()
