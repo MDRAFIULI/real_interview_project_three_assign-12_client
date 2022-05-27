@@ -70,8 +70,9 @@ const Purchase = () => {
 
     return (
         <div className='mt-24 mb-24'>
-            <h1 className='text-center'>Purchase for: {id}</h1>
-            <div class="mockup-window border bg-base-300 w-[800px] mx-auto mt-24">
+            <h1 className='text-center text-3xl text-[#0AA1DD]'>Give Order for: {product?.name}</h1>
+            <h1 className='text-center'>Tool ID: {id}</h1>
+            <div class="mockup-window border bg-base-300 w-[800px] mx-auto mt-12">
                 <div class="flex justify-center px-4 py-16 bg-base-200">
                     <form onSubmit={handleOnSubmit}>
                         <label className="label">

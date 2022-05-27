@@ -56,7 +56,14 @@ const AddReview = () => {
                             <label htmlFor="">Name</label><br />
                             <input type="text" name="" value={user?.displayName} readOnly ref={nameRef} className='p-2 rounded-md bg-orange-400 text-white font-bold' /><br />
                             <label htmlFor="">Ratings</label><br />
-                            <input onBlur={handleRatingsBlur} type="number" name="" id="" className='p-2 rounded-md bg-orange-400 text-white font-bold' /><br />
+                            {/* <input onBlur={handleRatingsBlur} type="number" name="" id="" className='p-2 rounded-md bg-orange-400 text-white font-bold' /><br /> */}
+                            <select className='bg-orange-400 rounded-md w-56 text-white' name="" id="">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select><br />
                             <label htmlFor="">Comment</label><br />
                             <textarea onBlur={handleCommentBlur} type="text" name="" id="" className='p-2 rounded-md bg-orange-400 text-white font-bold' cols="22" rows="5"></textarea>
                             <br /><br />

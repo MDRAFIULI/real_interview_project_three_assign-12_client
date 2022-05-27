@@ -5,10 +5,12 @@ import auth from '../../../firebase.init';
 import { toast } from 'react-toastify';
 import Loading from '../../shared/Loading/Loading';
 import { useQuery } from 'react-query';
+import DeleteConfirmModal from './DeleteConfirmModal';
 
 const MyOrder = () => {
     const [user] = useAuthState(auth);
     const { refetch } = useQuery('orders');
+    const [deletingOrder, setDeletingOrder] = useState(null);
     const [orders, setOrders] = useState([]);
     useEffect(() => {
         if (user) {
@@ -33,26 +35,26 @@ const MyOrder = () => {
                 });
         }
     }, [user]);
-    const handleDelete = (id) => {
+    // const handleDelete = (id) => {
 
 
-        fetch(`http://localhost:5000/orders/${id}`, {
-            method: 'DELETE'
-            /* headers: {
-                authorization: `Bearer ${localStorage.getItem('accessToken')}`
-            } */
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if (data.deletedCount) {
-                    const remaining = orders.filter(order => order._id !== id);
-                    setOrders(remaining);
-                    toast.success(`order: ${id} is deleted.`)
-                    refetch();
-                }
-            })
-    }
+    //     fetch(`http://localhost:5000/orders/${id}`, {
+    //         method: 'DELETE'
+    //         /* headers: {
+    //             authorization: `Bearer ${localStorage.getItem('accessToken')}`
+    //         } */
+    //     })
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             console.log(data);
+    //             if (data.deletedCount) {
+    //                 const remaining = orders.filter(order => order._id !== id);
+    //                 setOrders(remaining);
+    //                 toast.success(`order: ${id} is deleted.`)
+    //                 refetch();
+    //             }
+    //         })
+    // }
     return (
         <div className='mx-auto'>
             <h1>my order</h1>
@@ -77,9 +79,7 @@ const MyOrder = () => {
                                 <td>{order?.phone}</td>
                                 <td>{order?.quantity}</td>
                                 <td>
-                                    {
-                                        <button onClick={() => handleDelete(order._id)} className='btn btn-xs bg-red-500 border-none'>Cancel</button>
-                                    }
+                                    <label onClick={() => setDeletingOrder(order)} for="delete-confirm-modal" class="btn btn-xs btn-error">Delete</label>
                                 </td>
                                 {/* <td>
                                     {(a.price && !a.paid) && <Link to={`/dashboard/payment/${a._id}`}><button className='btn btn-xs btn-success'>pay</button></Link>}
@@ -95,6 +95,13 @@ const MyOrder = () => {
                     </tbody>
                 </table>
             </div>
+            {deletingOrder && <DeleteConfirmModal
+                deletingOrder={deletingOrder}
+                refetch={refetch}
+                setDeletingOrder={setDeletingOrder}
+                orders={orders}
+                setOrders={setOrders}
+            ></DeleteConfirmModal>}
         </div>
     );
 };
