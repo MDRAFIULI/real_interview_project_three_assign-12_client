@@ -17,6 +17,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import MyPortfolio from './page/MyPortfolio/MyPortfolio';
 import MakeAdmin from './page/Dashboard/MakeAdmin/MakeAdmin';
 import RequireAdmin from './page/RequireAdmin/RequireAdmin';
+import AddProduct from './page/AddProduct/AddProduct';
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
           <Route path='addReview' element={<AddReview></AddReview>}></Route>
           <Route path='myProfile' element={<MyProfile></MyProfile>}></Route>
           <Route path='makeAdmin' element={<RequireAdmin><MakeAdmin></MakeAdmin></RequireAdmin>}></Route>
+          <Route path='addProduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
         </Route>
         <Route path='/portfolio' element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
