@@ -8,40 +8,6 @@ import useToken from '../../hooks/useToken';
 // import useToken from '../../hooks/useToken';
 
 const Register = () => {
-    /* const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
-    const { register, formState: { errors }, handleSubmit } = useForm();
-    const [
-        createUserWithEmailAndPassword,
-        user,
-        loading,
-        error,
-    ] = useCreateUserWithEmailAndPassword(auth);
-
-    const [updateProfile, updating, updateError] = useUpdateProfile(auth);
-
-    const [token] = useToken(user || gUser);
-
-    const navigate = useNavigate();
-
-    let signInError;
-
-    if (loading || gLoading || updating) {
-        return <Loading></Loading>
-    }
-
-    if (error || gError || updateError) {
-        signInError = <p className='text-red-500'><small>{error?.message || gError?.message || updateError?.message}</small></p>
-    }
-
-    if (token) {
-        navigate('/appointment');
-    }
-
-    const onSubmit = async data => {
-        await createUserWithEmailAndPassword(data.email, data.password);
-        await updateProfile({ displayName: data.name });
-        console.log('update done');
-    } */
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
     const [

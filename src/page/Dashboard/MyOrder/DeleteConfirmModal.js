@@ -24,10 +24,10 @@ const DeleteConfirmModal = ({ deletingOrder, refetch, setDeletingOrder, setOrder
 
 
         fetch(`http://localhost:5000/orders/${id}`, {
-            method: 'DELETE'
-            /* headers: {
+            method: 'DELETE',
+            headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`
-            } */
+            }
         })
             .then(res => res.json())
             .then(data => {

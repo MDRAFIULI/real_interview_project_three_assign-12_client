@@ -1,32 +1,33 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
 import { toast } from 'react-toastify';
 import Loading from '../../shared/Loading/Loading';
 import { useQuery } from 'react-query';
 import DeleteConfirmModal from './DeleteConfirmModal';
+import { signOut } from 'firebase/auth';
 
 const MyOrder = () => {
     const [user] = useAuthState(auth);
     const { refetch } = useQuery('orders');
     const [deletingOrder, setDeletingOrder] = useState(null);
     const [orders, setOrders] = useState([]);
+    const navigate = useNavigate();
     useEffect(() => {
         if (user) {
             fetch(`http://localhost:5000/orders?email=${user.email}`, {
-                method: 'GET'
-                /* headers: {
+                method: 'GET',
+                headers: {
                     'authorization': `Bearer ${localStorage.getItem('accessToken')}`
-                } */
+                }
             })
                 .then(res => {
-                    /* console.log('res', res);
                     if (res.status === 401 || res.status === 403) {
                         signOut(auth);
                         localStorage.removeItem('accessToken');
                         navigate('/');
-                    } */
+                    }
                     return res.json()
                 })
                 .then(data => {
@@ -35,26 +36,6 @@ const MyOrder = () => {
                 });
         }
     }, [user]);
-    // const handleDelete = (id) => {
-
-
-    //     fetch(`http://localhost:5000/orders/${id}`, {
-    //         method: 'DELETE'
-    //         /* headers: {
-    //             authorization: `Bearer ${localStorage.getItem('accessToken')}`
-    //         } */
-    //     })
-    //         .then(res => res.json())
-    //         .then(data => {
-    //             console.log(data);
-    //             if (data.deletedCount) {
-    //                 const remaining = orders.filter(order => order._id !== id);
-    //                 setOrders(remaining);
-    //                 toast.success(`order: ${id} is deleted.`)
-    //                 refetch();
-    //             }
-    //         })
-    // }
     return (
         <div className='mx-auto'>
             <h1>my order</h1>
