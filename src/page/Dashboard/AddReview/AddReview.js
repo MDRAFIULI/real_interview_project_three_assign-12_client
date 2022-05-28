@@ -8,19 +8,17 @@ const AddReview = () => {
     const [user] = useAuthState(auth);
     const { refetch } = useQuery();
     console.log(user?.displayName);
-    const [name, setName] = useState(null);
     const [ratings, setRatings] = useState(1);
     const [comment, setComment] = useState('');
-    const nameRef = useRef('')
-    const handleRatingsBlur = (e) => {
-        setRatings(e.target.value);
-    }
+    const nameRef = useRef('');
+    const ratingsRef = useRef('');
     const handleCommentBlur = (e) => {
         setComment(e.target.value);
     }
     const handleOnSubmit = (e) => {
         e.preventDefault();
         const name = nameRef.current.value
+        const ratings = ratingsRef.current.value
         const review = {
             name,
             ratings,
@@ -57,7 +55,7 @@ const AddReview = () => {
                             <input type="text" name="" value={user?.displayName} readOnly ref={nameRef} className='p-2 rounded-md bg-orange-400 text-white font-bold' /><br />
                             <label htmlFor="">Ratings</label><br />
                             {/* <input onBlur={handleRatingsBlur} type="number" name="" id="" className='p-2 rounded-md bg-orange-400 text-white font-bold' /><br /> */}
-                            <select className='bg-orange-400 rounded-md w-56 text-white' name="" id="">
+                            <select className='bg-orange-400 rounded-md w-56 text-white' ref={ratingsRef} name="" id="">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>

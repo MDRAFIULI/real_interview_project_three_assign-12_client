@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import auth from '../../../firebase.init';
-import { toast } from 'react-toastify';
-import Loading from '../../shared/Loading/Loading';
 import { useQuery } from 'react-query';
 import DeleteConfirmModal from './DeleteConfirmModal';
 import { signOut } from 'firebase/auth';

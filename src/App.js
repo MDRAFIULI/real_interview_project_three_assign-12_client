@@ -18,6 +18,7 @@ import MyPortfolio from './page/MyPortfolio/MyPortfolio';
 import MakeAdmin from './page/Dashboard/MakeAdmin/MakeAdmin';
 import RequireAdmin from './page/RequireAdmin/RequireAdmin';
 import AddProduct from './page/AddProduct/AddProduct';
+import ManageProducts from './page/ManageProducts/ManageProducts';
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route path='myProfile' element={<MyProfile></MyProfile>}></Route>
           <Route path='makeAdmin' element={<RequireAdmin><MakeAdmin></MakeAdmin></RequireAdmin>}></Route>
           <Route path='addProduct' element={<RequireAdmin><AddProduct></AddProduct></RequireAdmin>}></Route>
+          <Route path='manageProducts' element={<RequireAdmin><ManageProducts></ManageProducts></RequireAdmin>}></Route>
         </Route>
         <Route path='/portfolio' element={<MyPortfolio></MyPortfolio>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
