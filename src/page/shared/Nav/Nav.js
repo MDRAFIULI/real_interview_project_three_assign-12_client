@@ -36,7 +36,7 @@ const Nav = () => {
             </div>
             <div class="navbar-center hidden lg:flex">
                 <ul class="menu menu-horizontal p-0 text-[#0AA1DD]">
-                    <li><a>Item 1</a></li>
+                    <li><Link to='/blogs'>Blogs</Link></li>
                     <li tabindex="0">
                         <Link to='dashboard'>
                             Dashboard
