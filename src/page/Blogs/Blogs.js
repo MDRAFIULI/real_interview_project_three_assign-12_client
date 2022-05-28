@@ -39,8 +39,7 @@ const Blogs = () => {
                     <h3 class="py-6 text-3xl">Why you do not set the state directly itn React?</h3>
                     <p className="text-left">
                         <ul>
-                            <li>আপনি যদি এটি সরাসরি আপডেট করেন, তাহলে setState() কে পরে কল করলে আপনার করা আপডেটটি বদলে যেতে পারে।
-                                jodi state direct update kra hoi
+                            <li>jodi state direct update kra hoi tobe pore setState ke call krle update change hoye jabe.
                             </li>
                             <li></li>
                             <li></li>
