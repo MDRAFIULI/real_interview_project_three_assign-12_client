@@ -25,7 +25,7 @@ const AddReview = () => {
             comment
         }
 
-        fetch('http://localhost:5000/reviews', {
+        fetch('https://powerful-meadow-41010.herokuapp.com/reviews', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

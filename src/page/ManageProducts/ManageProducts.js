@@ -13,7 +13,7 @@ const ManageProducts = () => {
     const navigate = useNavigate();
     useEffect(() => {
 
-        fetch('http://localhost:5000/products', {
+        fetch('https://powerful-meadow-41010.herokuapp.com/products', {
             method: 'GET',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
@@ -37,7 +37,7 @@ const ManageProducts = () => {
     const handleDelete = (id) => {
 
 
-        fetch(`http://localhost:5000/products/${id}`, {
+        fetch(`https://powerful-meadow-41010.herokuapp.com/products/${id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

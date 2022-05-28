@@ -23,7 +23,7 @@ const DeleteConfirmModal = ({ deletingOrder, refetch, setDeletingOrder, setOrder
     const handleDelete = (id) => {
 
 
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`https://powerful-meadow-41010.herokuapp.com/orders/${id}`, {
             method: 'DELETE',
             headers: {
                 authorization: `Bearer ${localStorage.getItem('accessToken')}`

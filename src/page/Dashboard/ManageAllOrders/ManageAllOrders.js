@@ -4,7 +4,7 @@ import Loading from '../../shared/Loading/Loading';
 
 const ManageAllOrders = () => {
     const { isLoading, error, data: allOrders } = useQuery('allOrders', () =>
-        fetch('http://localhost:5000/allOrders').then(res =>
+        fetch('https://powerful-meadow-41010.herokuapp.com/allOrders').then(res =>
             res.json()
         )
     );

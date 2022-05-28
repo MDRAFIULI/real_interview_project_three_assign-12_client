@@ -36,6 +36,19 @@ const Blogs = () => {
                         {example}
                     </p>
                     <br /><br />
+                    <h3 class="py-6 text-3xl">Why you do not set the state directly itn React?</h3>
+                    <p className="text-left">
+                        <ul>
+                            <li>আপনি যদি এটি সরাসরি আপডেট করেন, তাহলে setState() কে পরে কল করলে আপনার করা আপডেটটি বদলে যেতে পারে।
+                                jodi state direct update kra hoi
+                            </li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                            <li></li>
+                        </ul>
+                    </p>
+                    <br /><br />
 
                     <h3 class="py-6"></h3>
                     <button class="btn btn-primary">Get Started</button>

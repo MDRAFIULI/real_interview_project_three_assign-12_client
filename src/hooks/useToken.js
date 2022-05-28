@@ -7,7 +7,7 @@ const useToken = user => {
         const email = user?.user?.email;
         const currentUser = { email: email };
         if (email) {
-            const url = `http://localhost:5000/user/${email}`;
+            const url = `https://powerful-meadow-41010.herokuapp.com/user/${email}`;
             console.log(url);
             fetch(url, {
                 method: 'PUT',
@@ -19,6 +19,7 @@ const useToken = user => {
                 .then(res => res.json())
                 .then(data => {
                     const accessToken = data?.token;
+                    console.log(accessToken);
                     localStorage.setItem('accessToken', accessToken);
                     setToken(accessToken);
                 })

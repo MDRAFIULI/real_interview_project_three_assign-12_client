@@ -26,7 +26,7 @@ const AddProduct = () => {
         const perUnitPrice = availableOrderRef.current.value
         const product = { name, img, description, minimumOrderQuantity, availableOrderQuantity, perUnitPrice }
 
-        fetch('http://localhost:5000/products', {
+        fetch('https://powerful-meadow-41010.herokuapp.com/products', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

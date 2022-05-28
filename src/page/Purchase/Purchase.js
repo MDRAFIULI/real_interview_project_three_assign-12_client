@@ -17,7 +17,7 @@ const Purchase = () => {
     const quantityRef = useRef('');
 
     useEffect(() => {
-        const url = `http://localhost:5000/products/${id}`
+        const url = `https://powerful-meadow-41010.herokuapp.com/products/${id}`;
         fetch(url)
             .then(res => res.json())
             .then(data => setProduct(data))
@@ -49,7 +49,7 @@ const Purchase = () => {
 
         const order = { name, email, address, phone, quantity }
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://powerful-meadow-41010.herokuapp.com/orders', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

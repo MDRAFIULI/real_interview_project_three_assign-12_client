@@ -4,7 +4,7 @@ import Loading from '../../shared/Loading/Loading';
 import UserRow from './UserRow';
 
 const MakeAdmin = () => {
-    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('http://localhost:5000/user', {
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch('https://powerful-meadow-41010.herokuapp.com/user', {
         method: 'GET',
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
