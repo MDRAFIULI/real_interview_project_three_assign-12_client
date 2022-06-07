@@ -4,11 +4,9 @@
 [https://assignment-tweleve.web.app/](https://assignment-tweleve.web.app/)
 
 ## Features Of Heaven Tools
-* Protected route, Admin
-* Add product, Show toast
-* Add reviews, show error & loading,
-* Slice in Home page products
-* Routings etc.
+* A customer can purchase any available tools.their is also Protected route, user can't go purchase route without login.
+* Firebase authentication is activated for login, register & google sign-in.
+* Admin can access some sensitive nested routes & users can access some general routes.
 
 ## List of technology
 * Node
